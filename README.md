@@ -1,2 +1,2 @@
-# Algorithm_03
-회원03님의 코드 제출 장소
+# Algorithm_KYJ
+곽우정님의 코드 제출 장소
