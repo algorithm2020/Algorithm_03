@@ -8,7 +8,7 @@ int sum = 0;
 int cnt = 0;
 vector<int> arr;
 
-void dfs(int idx, int sum) {
+void dfs(int sum, int idx) {
 	sum += arr[idx];
 
 	if (idx >= n)
