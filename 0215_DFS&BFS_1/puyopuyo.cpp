@@ -6,6 +6,7 @@
 using namespace std;
 
 char map[12][6]; //입력받은 배열
+bool check[12][6] ;//방문했는지 체크하는 배열
 queue<pair<int,int>> q;
 
 int dx[] = { -1,1,0,0 };
@@ -14,11 +15,9 @@ int dy[] = { 0,0,-1,1 };
 int res = 0;
 
 bool cmp(pair<int, int> a, pair<int, int> b)
-
 {
 	if (a.second < b.second)
 		return true;
-
 	else if (a.second == b.second)
 	{
 		if (a.first < b.first)
@@ -32,9 +31,7 @@ void bfs()
 {
 	while (1)
 	{
-		//memset(check, false, sizeof(check));
-
-		bool check[12][6] = { false }; //방문했는지 체크하는 배열
+		memset(check, false, sizeof(check));
 		vector<pair<int, int>> pusija;
 		for (int x = 11; x >= 0; x--)
 		{
@@ -88,7 +85,7 @@ void bfs()
 			}
 		}
 
-		if (pusija.size() >= 4)
+		if (pusija.size() >= 4) //팡
 		{
 			sort(pusija.begin(), pusija.end(), cmp);
 			for (int i = 0; i < pusija.size(); i++)
@@ -102,7 +99,7 @@ void bfs()
 
 			}
 
-			res++; //연쇄 추가
+			res++; 
 
 		}
 		else
@@ -118,7 +115,7 @@ int main()
 	for (int i = 0; i < 12;i++)
 		for (int j = 0; j < 6;j++)
 			cin >> map[i][j];
-    bfs();
+    	bfs();
 	cout << res;
 
 	return 0;
