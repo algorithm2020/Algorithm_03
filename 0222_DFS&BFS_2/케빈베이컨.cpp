@@ -9,7 +9,7 @@ using namespace std;
 queue<int> q;
 bool visit[101]; //방문했는지 확인
 int dist[101]; //몇명통과해야하는지 알기위해
-int sum[101]; //각 사람의 
+int sum[101]; //각 사람의 케빈베이컨 
 int map[101][101];
 int N, M,a,b;
 
