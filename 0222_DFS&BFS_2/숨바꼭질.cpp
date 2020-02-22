@@ -9,8 +9,8 @@ using namespace std;
 int N, K;
 int cnt = 0;
 queue<int> q;
-bool visit[100001];//[100000]로 하니까 런타임에러
-int dist[100001]; //[100000]로 하니까 런타임에러
+bool visit[100001];
+int dist[100001]; 
 
 void bfs(int x )
 {
