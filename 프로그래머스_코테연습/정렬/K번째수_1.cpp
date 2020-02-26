@@ -20,7 +20,7 @@ vector<int> solution(vector<int> array, vector<vector<int>> commands) {
         
         for (int k=0;k<cnt;k++) 
         {   
-            slice.pop_back(); 
+            slice.pop_back(); //slice 비워줘야함.
         }
         cnt = 0;
     }
