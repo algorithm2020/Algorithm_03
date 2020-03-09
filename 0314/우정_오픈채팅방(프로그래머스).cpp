@@ -18,7 +18,7 @@ vector<string> solution(vector<string> record) {
 		if (record[i][0] == 'E') //Enter일 경우
 		{
 			int j;
-      string id,name;
+      			string id,name;
 			for (j = 6; record[i][j] != ' '; j++)
 			{
 				id += record[i][j];
@@ -34,7 +34,7 @@ vector<string> solution(vector<string> record) {
     
 		else if (record[i][0] == 'L') //Leave
 		{
-      string id,name;
+      			string id,name;
 			for (int j = 6; j<record[i].size(); j++)
 			{
 				id += record[i][j];
@@ -44,7 +44,7 @@ vector<string> solution(vector<string> record) {
     
 		else if (record[i][0] == 'C') //Change
 		{
-      string id,name;
+      			string id,name;
 			int j;
 			for (j = 7; record[i][j] != ' '; j++)
 			{
