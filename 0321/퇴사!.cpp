@@ -12,13 +12,15 @@ int result;
 
 void findMax(int day, int total)
 {
-	if (day > N)
+	if (day > N) //day==N 일때 계산하는 경우도 있어서 '>'로 해줌.
 	{
 		result = max(result, total);
 		return;
 	}
-
+	
+	// day에 상담가능한 경우,
 	if (day + time[day] <= N + 1) findMax(day + time[day], total + cost[day]);
+	// day에 상담하지 않는 경우,
 	if (day + 1 <= N + 1) findMax(day + 1, total);
 
 }
