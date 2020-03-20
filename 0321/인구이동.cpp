@@ -1,3 +1,6 @@
+//삼성SW역량테스트 기출
+//abs():절댓값 함수
+
 #include<iostream>
 #include<cstring>
 #include<vector>
